@@ -1,0 +1,47 @@
+.sign-up-free {
+	padding-top: 146px;
+	padding-bottom: 113px;
+	font-size: 0px;
+	h3 {
+		font-family: 'Open Sans',sans-serif;
+		font-weight: lighter;
+		font-size: 24px;
+		text-transform: uppercase;
+		text-align: center;
+		color: #363636;
+	}
+	p {
+		margin-top: 17px;
+		margin-bottom: 71px;
+		font-family: Georgia;
+		font-style: italic;
+		font-size: 14px;
+		line-height: 28px;
+		text-align: center;		
+		color: #8a8a8a;
+	}
+	a {
+		display: inline-block;
+		width: 230px;
+		height: 72px;
+		margin: auto;
+		background-color: #16a085;
+		font-family: 'Open Sans', sans-serif;
+		font-weight:normal;
+		font-size: 16px;
+		line-height: 72px;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		color: #ffffff;
+		@include border-radius (5px);
+		@include box-shadow (0 -3px 0 #3bd4b6 inset);
+		@include user-select (none);
+		@include transition-property (all);
+		@include transition-duration (400ms);
+		&:hover {
+			background-color: #19b596;
+			cursor: pointer;
+		}
+	}	
+}

@@ -1,0 +1,65 @@
+.lorem-dolor {
+	padding-top: 142px;
+	figure {
+		img {
+			float: right;
+			margin-right: 51px;
+			@include user-select (none);
+		}
+		figcaption {
+			width: 475px;
+			margin-left: 20px;
+			font-size: 0;
+			.icon{
+				display: inline-block;
+				font-size: 0;
+				vertical-align: bottom;
+				@include user-select (none);
+				li {
+					display: inline-block;
+					width: 30px;
+					&:first-child {
+						margin-left: 34px;
+					}
+					&:last-child {
+						margin-left: 20px;
+					}
+					a {
+						display: block;
+						height: 36px;
+						margin: 6px auto;
+						background-image:url(../../images/icon/icon.png);
+						background-repeat: no-repeat;
+						@include opacity(0.45);
+						@include transition-property (all);
+						@include transition-duration (400ms);
+					}
+					&:first-child {
+						a {
+							width: 29px;
+							@extend.icon-apple-icon;
+						}
+					}
+					&:last-child {
+						a {
+							width: 30px;
+							@extend.icon-android-icon;
+						}	
+					}
+					&:hover {
+						&:first-child {
+						a {
+							@include opacity(1);
+						}
+					}
+					&:last-child {
+						a {
+							@include opacity(1);
+						}	
+					}
+					}
+				}
+			}
+		}
+	}
+}

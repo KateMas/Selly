@@ -1,0 +1,63 @@
+.ut-sagittis {
+	padding-top: 214px;
+	padding-bottom: 214px;
+	h5 {
+		text-align: center;
+		sup {
+			vertical-align: super;
+			font-size: smaller; 
+		}
+	}
+	h2 {
+		margin-top: 16px;
+		text-align: center;
+		@include box-sizing (border-box);
+	}
+	.features {
+		width: 860px;
+		margin-top: 50px;
+		margin-left: 20px;
+		font-size: 0;
+		figure {
+			display: inline-block;
+			width: 240px;
+			margin-right: 70px;
+			&:last-child {
+				margin-right: 0px;
+			}
+			img {
+				width: 213px;
+				height: 213px;
+				padding:12px 13px 13px 12px;
+				border: 1px solid #e1e1e1;
+				@include user-select (none);
+				&:nth-child(2) {
+					padding:13px 12px 13px 12px;
+				}
+			}
+			figcaption {
+				h3 {
+					margin-top: 41px;
+					font-family: 'Open Sans', sans-serif;
+					font-weight: lighter;
+					font-size: 24px;
+					text-align: center;	
+					text-transform: uppercase;
+					color: #363636;
+				}
+				p {
+					margin-top: 16px;
+					font-family: Georgia;
+					font-style: italic;
+					font-size: 14px;
+					line-height: 25px;
+					text-align: center;
+					color: #777777;
+				}
+				.arrow-green {
+				margin: 29px auto 0px;
+				}
+			}
+		}
+	}
+}

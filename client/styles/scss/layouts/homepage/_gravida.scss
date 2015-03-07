@@ -1,0 +1,14 @@
+.gravida {
+	figure {
+		padding-top: 216px;
+		img {
+			float: left;
+			margin-left: 20px;
+			@include user-select (none);
+		}
+		figcaption {
+			float: right;
+			margin-right: 38px;
+		}
+	}
+}			

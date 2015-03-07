@@ -1,0 +1,34 @@
+input {
+	display: inline-block;
+	width: 488px;
+	height: 75px;
+	padding-left: 68px;
+	border:none;
+	background-image: url(../../../client/images/sign/envelope-icon.png);
+	background-position: 22px center;
+	background-repeat: no-repeat;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+	font-size: 18px;
+	vertical-align: bottom;
+	color: #777777;
+	outline: none;
+	@include border-radius (5px 0 0 5px);
+	@include box-sizing (border-box);
+	@include user-select (none);
+	&:focus {
+		background-color: #eac7d1;
+		background-image: url(../../../client/images/sign/envelope-icon-white.png);
+		background-position: 22px center;
+		background-repeat: no-repeat;
+		font-family: Georgia;
+		font-weight: lighter;
+		font-size: 18px;
+		color: #51272d;
+		@include transition-property (all);
+		@include transition-duration (1000ms);
+		@include placeholder {
+			color: transparent;
+		}
+	}						
+}

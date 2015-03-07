@@ -1,0 +1,27 @@
+.mobile-features {
+	figure {		
+		text-align: left;
+		@include clearfix;
+		figcaption {
+			margin-top: 175px;
+			width: 468px;
+			@include box-sizing (border-box);		
+			h2 {
+				display: inline-block;
+				margin-top: 16px;
+				line-height: 38px;
+			}
+			p {
+				margin-top: 31px;
+				font-family: 'Open Sans',sans-serif;
+				font-weight: lighter;
+				font-size: 16px;
+				line-height: 28px;
+				color: #898989;
+			}
+			.arrow-green {
+				margin-top: 28px;				
+			}
+		}
+	}
+}
