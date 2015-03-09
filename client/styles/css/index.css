@@ -180,7 +180,7 @@ input:focus:-ms-input-placeholder {
 
 .arrow-green {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 29px;
   height: 29px;
   border: 2px solid #34ac95;
@@ -393,6 +393,7 @@ body.homepage .greeting {
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
   color: #ffffff;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -454,10 +455,14 @@ body.homepage .greeting .button-suggest {
 }
 body.homepage .greeting .button-suggest li {
   display: inline-block;
+  height: 72px;
   font-size: 16px;
   line-height: 72px;
   vertical-align: bottom;
   cursor: pointer;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
@@ -469,7 +474,6 @@ body.homepage .greeting .button-suggest li {
 }
 body.homepage .greeting .button-suggest li:first-child {
   width: 230px;
-  height: 72px;
   background-color: #16a085;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -483,7 +487,6 @@ body.homepage .greeting .button-suggest li:first-child:hover {
 }
 body.homepage .greeting .button-suggest li:last-child {
   width: 226px;
-  height: 68px;
   margin-left: 30px;
   border: 2px solid #ffffff;
   background-color: rgba(20, 29, 37, 0.5);
@@ -504,9 +507,7 @@ body.homepage .greeting .arrow-white {
   display: inline-block;
   width: 45px;
   height: 45px;
-  margin: 0 auto;
   border: 2px solid #ffffff;
-  z-index: 1;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -630,7 +631,7 @@ body.homepage .lorem-dolor figure figcaption .icon li:hover:last-child a {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-body.homepage .gravida figure {
+body.homepage .gravida {
   padding-top: 216px;
 }
 body.homepage .gravida figure img {
@@ -710,11 +711,8 @@ body.homepage .ut-sagittis .features figure figcaption p {
   text-align: center;
   color: #777777;
 }
-body.homepage .ut-sagittis .features figure figcaption:nth-child(2) {
-  position: relative;
-}
-body.homepage .ut-sagittis .features figure figcaption:nth-child(2) .arrow-green {
-  margin: 29px auto 0px;
+body.homepage .ut-sagittis .arrow-green {
+  margin-top: 29px;
 }
 body.homepage .sign-up {
   position: relative;
@@ -826,10 +824,13 @@ body.homepage .vel-bibendum .about-people {
 }
 body.homepage .vel-bibendum .about-people figure {
   display: inline-block;
-  width: 419px;
+  width: 421px;
   margin-top: 60px;
   margin-right: 60px;
   border: 1px solid #e1e1e1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 body.homepage .vel-bibendum .about-people figure:first-child {
   margin-top: 0px;

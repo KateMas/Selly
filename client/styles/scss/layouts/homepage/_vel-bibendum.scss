@@ -12,10 +12,11 @@
 	 	font-size: 0;
 	 	figure {
 	 		display: inline-block;
-	 		width: 419px;
+	 		width: 421px;
 	 		margin-top: 60px;
 	 		margin-right: 60px;
 	 		border:1px solid #e1e1e1;
+	 		@include box-sizing (border-box);
 	 		&:first-child {
 	 			margin-top:0px;
 	 		}
