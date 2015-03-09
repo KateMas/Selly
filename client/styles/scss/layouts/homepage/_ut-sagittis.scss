@@ -11,7 +11,6 @@
 	h2 {
 		margin-top: 16px;
 		text-align: center;
-		@include box-sizing (border-box);
 	}
 	.features {
 		width: 860px;
@@ -42,6 +41,7 @@
 					font-weight: lighter;
 					font-size: 24px;
 					text-align: center;	
+					line-height: 26px;
 					text-transform: uppercase;
 					color: #363636;
 				}
@@ -54,9 +54,12 @@
 					text-align: center;
 					color: #777777;
 				}
-				.arrow-green {
-				margin: 29px auto 0px;
-				}
+				&:nth-child(2) {
+					position:relative;
+					.arrow-green {
+					margin: 29px auto 0px;
+					}
+				}	
 			}
 		}
 	}

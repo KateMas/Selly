@@ -6,12 +6,14 @@ aside {
     height: 100%;
     padding-top: 123px;
     background-color: #e4e8ea;
-    font-size: 0px;
     text-align: center;
     @include transition-property(right);
     @include transition-duration(400ms);
     &.show {
         right: 0;
+    }
+    img {
+        @include user-select (none);
     }
     .menu-sidebar {
         margin-top: 64px;
@@ -21,7 +23,7 @@ aside {
             font-size: 12px;
             text-transform: uppercase;
             li {
-                &:after {
+                &::after {
                     display: block;
                     width: 30px;
                     height: 1px;
@@ -30,7 +32,7 @@ aside {
                     content: "";
                 } 
                 &:last-child {
-                    &:after {
+                    &::after {
                         display: none;
                     }
                 }  

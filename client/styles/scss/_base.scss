@@ -6,6 +6,7 @@ body {
 			font-family: 'Open Sans',sans-serif;
 			font-weight: lighter;
 			font-size: 35px;
+			line-height: 38px;
 			text-transform: uppercase;
 			color: #363636;
 		}
@@ -13,33 +14,33 @@ body {
 			font-family: Georgia;
 			font-style: italic;
 			font-size: 14px;
+			line-height: 15px;
 			color: #8a8a8a;
 		}
 		main {
 			border-bottom:1px solid #e1e1e1;
-			.content-wrapper {
-				font-size: 0px;
-				text-align: center;
-				.content {
-					display: inline-block;					
-				}
-				.clearfix {
-					&::after {
-						display: table;
-						clear: both;
-						content: "";
-					}
-				}
-				.container {
-					width: 902px;
-					margin:0 auto;
-				}
-			}	
 			.background {
 				background-image: url(../../images/background.png);
 				background-repeat: no-repeat;
 			}
-		}
-			
+		}	
+		.content-wrapper {
+			font-size: 0px;
+			text-align: center;
+			.content {
+				display: inline-block;	
+				.container {
+					width: 902px;
+					margin:0 auto;
+				}				
+			}
+			.clearfix {
+				&::after {
+					display: table;
+					clear: both;
+					content: "";
+				}
+			}	
+		}			
 	}
 }

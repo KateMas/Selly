@@ -78,6 +78,7 @@ body.homepage h2 {
   font-family: 'Open Sans',sans-serif;
   font-weight: lighter;
   font-size: 35px;
+  line-height: 38px;
   text-transform: uppercase;
   color: #363636;
 }
@@ -85,30 +86,31 @@ body.homepage h5 {
   font-family: Georgia;
   font-style: italic;
   font-size: 14px;
+  line-height: 15px;
   color: #8a8a8a;
 }
 body.homepage main {
   border-bottom: 1px solid #e1e1e1;
 }
-body.homepage main .content-wrapper {
-  font-size: 0px;
-  text-align: center;
-}
-body.homepage main .content-wrapper .content {
-  display: inline-block;
-}
-body.homepage main .content-wrapper .clearfix::after {
-  display: table;
-  clear: both;
-  content: "";
-}
-body.homepage main .content-wrapper .container {
-  width: 902px;
-  margin: 0 auto;
-}
 body.homepage main .background {
   background-image: url(../../images/background.png);
   background-repeat: no-repeat;
+}
+body.homepage .content-wrapper {
+  font-size: 0px;
+  text-align: center;
+}
+body.homepage .content-wrapper .content {
+  display: inline-block;
+}
+body.homepage .content-wrapper .content .container {
+  width: 902px;
+  margin: 0 auto;
+}
+body.homepage .content-wrapper .clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
 }
 
 input {
@@ -208,10 +210,10 @@ input:focus:-ms-input-placeholder {
 .arrow-green:hover:before {
   background-color: #596162;
 }
-.arrow-green:hover:after {
+.arrow-green:hover::after {
   background-color: #596162;
 }
-.arrow-green:before {
+.arrow-green::before {
   position: absolute;
   top: 13px;
   left: 7px;
@@ -228,7 +230,7 @@ input:focus:-ms-input-placeholder {
   -webkit-border-radius: 50px;
   border-radius: 50px 0 0 50px;
 }
-.arrow-green:after {
+.arrow-green::after {
   position: absolute;
   top: 13px;
   right: 7px;
@@ -246,24 +248,27 @@ input:focus:-ms-input-placeholder {
   border-radius: 0 50px 50px 0px;
 }
 
-footer nav ul {
+footer .container ul {
   font-size: 0px;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   line-height: 100px;
 }
-footer nav ul li {
+footer .container ul li {
   display: inline-block;
   margin-right: 27px;
   font-size: 14px;
 }
-footer nav ul li:last-child {
+footer .container ul li:hover a {
+  color: #19b596;
+}
+footer .container ul li:last-child {
   margin-left: 239px;
   margin-right: 0px;
 }
-footer nav ul li a {
+footer .container ul li a {
   text-decoration: none;
-  color: #363636;
+  color: #8a8a8a;
 }
 
 .mobile-features figure {
@@ -303,7 +308,6 @@ aside {
   height: 100%;
   padding-top: 123px;
   background-color: #e4e8ea;
-  font-size: 0px;
   text-align: center;
   -moz-transition-property: right;
   -o-transition-property: right;
@@ -317,6 +321,14 @@ aside {
 aside.show {
   right: 0;
 }
+aside img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
 aside .menu-sidebar {
   margin-top: 64px;
 }
@@ -326,7 +338,7 @@ aside .menu-sidebar ul {
   font-size: 12px;
   text-transform: uppercase;
 }
-aside .menu-sidebar ul li:after {
+aside .menu-sidebar ul li::after {
   display: block;
   width: 30px;
   height: 1px;
@@ -334,7 +346,7 @@ aside .menu-sidebar ul li:after {
   margin: 25px auto 27px;
   content: "";
 }
-aside .menu-sidebar ul li:last-child:after {
+aside .menu-sidebar ul li:last-child::after {
   display: none;
 }
 aside .menu-sidebar ul li a {
@@ -394,19 +406,24 @@ body.homepage .greeting .logo {
   margin: auto;
   background-image: url(../../../client/images/greeting/Selly.png);
   background-repeat: no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
 }
-body.homepage .greeting .logo:after {
+body.homepage .greeting .logo::after {
   position: absolute;
   display: block;
-  content: url(../../../client/images/greeting/shadow.png);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=9);
-  opacity: 0.09;
+  content: url(../../../client/images/greeting/shadow1.png);
 }
 body.homepage .greeting h1 {
   margin-top: 47px;
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   font-size: 48px;
+  line-height: 60px;
   text-align: center;
 }
 body.homepage .greeting h1 span {
@@ -418,6 +435,7 @@ body.homepage .greeting p {
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   font-size: 18px;
+  line-height: 21px;
   text-align: center;
 }
 body.homepage .greeting .button-suggest {
@@ -437,9 +455,9 @@ body.homepage .greeting .button-suggest {
 }
 body.homepage .greeting .button-suggest li {
   display: inline-block;
-  height: 72px;
   font-size: 16px;
   line-height: 72px;
+  vertical-align: bottom;
   cursor: pointer;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -452,6 +470,7 @@ body.homepage .greeting .button-suggest li {
 }
 body.homepage .greeting .button-suggest li:first-child {
   width: 230px;
+  height: 72px;
   background-color: #16a085;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -465,9 +484,11 @@ body.homepage .greeting .button-suggest li:first-child:hover {
 }
 body.homepage .greeting .button-suggest li:last-child {
   width: 226px;
+  height: 68px;
   margin-left: 30px;
   border: 2px solid #ffffff;
   background-color: rgba(20, 29, 37, 0.5);
+  vertical-align: bottom;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -504,7 +525,7 @@ body.homepage .greeting .arrow-white {
 body.homepage .greeting .arrow-white:hover {
   background-color: rgba(20, 29, 37, 0.5);
 }
-body.homepage .greeting .arrow-white:before {
+body.homepage .greeting .arrow-white::before {
   position: absolute;
   top: 21px;
   left: 11px;
@@ -521,7 +542,7 @@ body.homepage .greeting .arrow-white:before {
   -webkit-border-radius: 50px;
   border-radius: 50px 0 0 50px;
 }
-body.homepage .greeting .arrow-white:after {
+body.homepage .greeting .arrow-white::after {
   position: absolute;
   top: 21px;
   right: 11px;
@@ -570,15 +591,22 @@ body.homepage .lorem-dolor figure figcaption .icon {
 body.homepage .lorem-dolor figure figcaption .icon li {
   display: inline-block;
   width: 30px;
+  font-size: 0;
 }
 body.homepage .lorem-dolor figure figcaption .icon li:first-child {
   margin-left: 34px;
 }
+body.homepage .lorem-dolor figure figcaption .icon li:first-child a {
+  width: 29px;
+}
 body.homepage .lorem-dolor figure figcaption .icon li:last-child {
   margin-left: 20px;
 }
+body.homepage .lorem-dolor figure figcaption .icon li:last-child a {
+  width: 30px;
+}
 body.homepage .lorem-dolor figure figcaption .icon li a {
-  display: block;
+  display: inline-block;
   height: 36px;
   margin: 6px auto;
   background-image: url(../../images/icon/icon.png);
@@ -593,12 +621,6 @@ body.homepage .lorem-dolor figure figcaption .icon li a {
   -o-transition-duration: 400ms;
   -webkit-transition-duration: 400ms;
   transition-duration: 400ms;
-}
-body.homepage .lorem-dolor figure figcaption .icon li:first-child a {
-  width: 29px;
-}
-body.homepage .lorem-dolor figure figcaption .icon li:last-child a {
-  width: 30px;
 }
 body.homepage .lorem-dolor figure figcaption .icon li:hover:first-child a {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -639,9 +661,6 @@ body.homepage .ut-sagittis h5 sup {
 body.homepage .ut-sagittis h2 {
   margin-top: 16px;
   text-align: center;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 body.homepage .ut-sagittis .features {
   width: 860px;
@@ -678,6 +697,7 @@ body.homepage .ut-sagittis .features figure figcaption h3 {
   font-weight: lighter;
   font-size: 24px;
   text-align: center;
+  line-height: 26px;
   text-transform: uppercase;
   color: #363636;
 }
@@ -690,7 +710,10 @@ body.homepage .ut-sagittis .features figure figcaption p {
   text-align: center;
   color: #777777;
 }
-body.homepage .ut-sagittis .features figure figcaption .arrow-green {
+body.homepage .ut-sagittis .features figure figcaption:nth-child(2) {
+  position: relative;
+}
+body.homepage .ut-sagittis .features figure figcaption:nth-child(2) .arrow-green {
   margin: 29px auto 0px;
 }
 body.homepage .sign-up {
@@ -739,6 +762,7 @@ body.homepage .sign-up .content-form p {
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   font-size: 18px;
+  line-height: 22px;
   text-align: center;
   color: #ffffff;
 }
@@ -863,7 +887,6 @@ body.homepage .vel-bibendum .about-people figure figcaption p {
 body.homepage .sign-up-free {
   padding-top: 146px;
   padding-bottom: 113px;
-  font-size: 0px;
 }
 body.homepage .sign-up-free h3 {
   font-family: 'Open Sans',sans-serif;

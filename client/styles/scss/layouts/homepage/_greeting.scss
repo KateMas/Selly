@@ -16,11 +16,11 @@
 		margin:auto;
 		background-image:url(../../../client/images/greeting/Selly.png);
 		background-repeat: no-repeat;
-		   &:after {
+		@include user-select (none);
+		   &::after {
 			position: absolute;
 			display: block;
-			content:url(../../../client/images/greeting/shadow.png);
-			@include opacity(0.09);
+			content:url(../../../client/images/greeting/shadow1.png);
 		}   
 	}
 	h1 {
@@ -28,6 +28,7 @@
 		font-family: 'Open Sans', sans-serif;
 		font-weight: lighter;
 		font-size: 48px;
+		line-height: 60px;
 		text-align: center;
 		span {
 			font-family: 'Open Sans', sans-serif;
@@ -39,6 +40,7 @@
 		font-family: 'Open Sans', sans-serif;
 		font-weight: lighter;
 		font-size: 18px;
+		line-height: 21px;
 		text-align: center;
 	}
 	.button-suggest {
@@ -52,14 +54,15 @@
 		@include user-select (none);
 		li {
 			display: inline-block;
-			height: 72px;
 			font-size: 16px;
 			line-height: 72px;
+			vertical-align:bottom;
 			cursor: pointer;
 			@include transition-property (all);
 			@include transition-duration (400ms);
 			&:first-child {
 				width: 230px;
+				height: 72px;
 				background-color: #16a085;
 				@include border-radius (5px);
 				@include box-shadow (0 -3px 0 #3bd4b6 inset);
@@ -69,9 +72,11 @@
 			}
 			&:last-child {
 				width: 226px;
+				height: 68px;
 				margin-left: 30px;
 				border: 2px solid #ffffff;
 				background-color: rgba(#141d25,0.5);
+				vertical-align:bottom;
 				@include border-radius (5px);
 				&:hover {
 					background-color: #141d25;
@@ -97,7 +102,7 @@
 		&:hover {
 			background-color: rgba(#141d25,0.5);   
 		}
-		&:before {
+		&::before {
 			position:absolute;
 			top: 21px;
 			left: 11px;
@@ -109,7 +114,7 @@
 			@include transform (rotate(45deg));
 			@include border-radius (50px 0 0 50px);
 		}
-		&:after {
+		&::after {
 			position:absolute;
 			top: 21px;
 			right: 11px;
