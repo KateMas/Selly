@@ -744,7 +744,6 @@ body.homepage .sign-up::after {
   height: 5px;
   background-image: url(../../../client/images/color-border.png);
   background-repeat: repeat-x;
-  background-position-x: 10%;
   content: "";
 }
 body.homepage .sign-up .content-form {
