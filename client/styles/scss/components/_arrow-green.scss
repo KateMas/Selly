@@ -11,34 +11,29 @@
 	&:hover {
 		border:2px solid #A4A4A6;
 		background-color: #E4E8EA;
-		&:before {
+		&::before {
 			background-color: #596162;
 		}
 		&::after {
 			background-color: #596162;
 		}
 	}
-	&::before {
+	&::before, &::after {
 		position:absolute;
 		top: 13px;
-		left: 7px;
 		display: block;
 		width: 7px;
 		height: 2px;
 		background-color: #34ac95;
 		content: "";
+	}
+	&:before {		
+		left: 7px;		
 		@include transform (rotate(45deg));
 		@include border-radius (50px 0 0 50px);
 	}
 	&::after {
-		position:absolute;
-		top: 13px;
 		right: 7px;
-		display: block;
-		width: 7px;
-		height: 2px;
-		background-color: #34ac95;
-		content: "";
 		@include transform (rotate(-45deg));
 		@include border-radius (0 50px 50px 0px);
 	} 

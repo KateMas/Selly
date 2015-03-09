@@ -92,10 +92,6 @@ body.homepage h5 {
 body.homepage main {
   border-bottom: 1px solid #e1e1e1;
 }
-body.homepage main .background {
-  background-image: url(../../images/background.png);
-  background-repeat: no-repeat;
-}
 body.homepage .content-wrapper {
   font-size: 0px;
   text-align: center;
@@ -207,21 +203,23 @@ input:focus:-ms-input-placeholder {
   border: 2px solid #A4A4A6;
   background-color: #E4E8EA;
 }
-.arrow-green:hover:before {
+.arrow-green:hover::before {
   background-color: #596162;
 }
 .arrow-green:hover::after {
   background-color: #596162;
 }
-.arrow-green::before {
+.arrow-green::before, .arrow-green::after {
   position: absolute;
   top: 13px;
-  left: 7px;
   display: block;
   width: 7px;
   height: 2px;
   background-color: #34ac95;
   content: "";
+}
+.arrow-green:before {
+  left: 7px;
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -231,14 +229,7 @@ input:focus:-ms-input-placeholder {
   border-radius: 50px 0 0 50px;
 }
 .arrow-green::after {
-  position: absolute;
-  top: 13px;
   right: 7px;
-  display: block;
-  width: 7px;
-  height: 2px;
-  background-color: #34ac95;
-  content: "";
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
@@ -258,6 +249,14 @@ footer .container ul li {
   display: inline-block;
   margin-right: 27px;
   font-size: 14px;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
 }
 footer .container ul li:hover a {
   color: #19b596;
@@ -502,11 +501,12 @@ body.homepage .greeting .button-suggest li a {
 }
 body.homepage .greeting .arrow-white {
   position: relative;
-  display: block;
+  display: inline-block;
   width: 45px;
   height: 45px;
-  margin: auto;
+  margin: 0 auto;
   border: 2px solid #ffffff;
+  z-index: 1;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;

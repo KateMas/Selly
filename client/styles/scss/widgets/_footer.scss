@@ -9,6 +9,8 @@ footer{
 				display: inline-block;
 				margin-right: 27px;
 				font-size: 14px;
+				@include transition-property (all);
+				@include transition-duration (200ms);
 				&:hover {
 					a {
 						color:#19b596;

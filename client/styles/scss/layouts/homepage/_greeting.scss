@@ -90,11 +90,12 @@
 	}
 	.arrow-white {
 		position:relative;
-		display: block;
+		display: inline-block;
 		width: 45px;
 		height: 45px;
-		margin: auto;
+		margin: 0 auto;
 		border: 2px solid #ffffff;
+		z-index: 1;
 		@include border-radius (50%);
 		@include box-sizing (border-box);
 		@include transition-property (all);
