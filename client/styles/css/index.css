@@ -416,7 +416,7 @@ body.homepage .greeting .logo {
 body.homepage .greeting .logo::after {
   position: absolute;
   display: block;
-  content: url(../../../client/images/greeting/shadow1.png);
+  content: url(../../../client/images/greeting/shadow.png);
 }
 body.homepage .greeting h1 {
   margin-top: 47px;
