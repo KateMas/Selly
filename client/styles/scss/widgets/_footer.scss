@@ -11,13 +11,14 @@ footer{
 				font-size: 14px;
 				@include transition-property (all);
 				@include transition-duration (200ms);
+				@include clearfix;
 				&:hover {
 					a {
 						color:#19b596;
 					}
 				}
 				&:last-child {
-					margin-left: 239px;
+					float: right;
 					margin-right: 0px;
 				}
 				a {
