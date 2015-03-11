@@ -109,7 +109,7 @@ body.homepage .content-wrapper .clearfix::after {
   content: "";
 }
 
-input {
+input[type="email"] {
   display: inline-block;
   width: 488px;
   height: 75px;
@@ -137,7 +137,7 @@ input {
   user-select: none;
   cursor: default;
 }
-input:focus {
+input[type="email"]:focus {
   background-color: #eac7d1;
   background-image: url(../../../client/images/sign/envelope-icon-white.png);
   background-position: 22px center;
@@ -155,16 +155,16 @@ input:focus {
   -webkit-transition-duration: 1000ms;
   transition-duration: 1000ms;
 }
-input:focus::-webkit-input-placeholder {
+input[type="email"]:focus::-webkit-input-placeholder {
   color: transparent;
 }
-input:focus:-moz-placeholder {
+input[type="email"]:focus:-moz-placeholder {
   color: transparent;
 }
-input:focus::-moz-placeholder {
+input[type="email"]:focus::-moz-placeholder {
   color: transparent;
 }
-input:focus:-ms-input-placeholder {
+input[type="email"]:focus:-ms-input-placeholder {
   color: transparent;
 }
 
@@ -178,12 +178,9 @@ input:focus:-ms-input-placeholder {
   content: "";
 }
 
-.arrow-green {
+.arrow {
   position: relative;
   display: inline-block;
-  width: 29px;
-  height: 29px;
-  border: 2px solid #34ac95;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -199,27 +196,11 @@ input:focus:-ms-input-placeholder {
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
 }
-.arrow-green:hover {
-  border: 2px solid #A4A4A6;
-  background-color: #E4E8EA;
-}
-.arrow-green:hover::before {
-  background-color: #596162;
-}
-.arrow-green:hover::after {
-  background-color: #596162;
-}
-.arrow-green::before, .arrow-green::after {
+.arrow::before, .arrow::after {
   position: absolute;
-  top: 13px;
-  display: block;
-  width: 7px;
-  height: 2px;
-  background-color: #34ac95;
   content: "";
 }
-.arrow-green:before {
-  left: 7px;
+.arrow::before {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -228,8 +209,7 @@ input:focus:-ms-input-placeholder {
   -webkit-border-radius: 50px;
   border-radius: 50px 0 0 50px;
 }
-.arrow-green::after {
-  right: 7px;
+.arrow::after {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
@@ -237,6 +217,53 @@ input:focus:-ms-input-placeholder {
   -moz-border-radius: 0 50px 50px 0px;
   -webkit-border-radius: 0;
   border-radius: 0 50px 50px 0px;
+}
+.arrow.green {
+  width: 29px;
+  height: 29px;
+  margin-top: 28px;
+  border: 2px solid #34ac95;
+}
+.arrow.green::before, .arrow.green::after {
+  top: 13px;
+  display: block;
+  width: 7px;
+  height: 2px;
+  background-color: #34ac95;
+}
+.arrow.green::before {
+  left: 7px;
+}
+.arrow.green::after {
+  right: 7px;
+}
+.arrow.green:hover {
+  border: 2px solid #A4A4A6;
+  background-color: #E4E8EA;
+}
+.arrow.green:hover::before, .arrow.green:hover::after {
+  background-color: #596162;
+}
+.arrow.white {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #ffffff;
+}
+.arrow.white::before, .arrow.white::after {
+  top: 21px;
+  display: block;
+  width: 12px;
+  height: 3px;
+  background-color: #ffffff;
+}
+.arrow.white::before {
+  left: 11px;
+}
+.arrow.white::after {
+  right: 11px;
+}
+.arrow.white:hover {
+  background-color: rgba(20, 29, 37, 0.5);
 }
 
 footer .container ul {
@@ -257,8 +284,6 @@ footer .container ul li {
   -o-transition-duration: 200ms;
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
-  overflow: hidden;
-  *zoom: 1;
 }
 footer .container ul li:hover a {
   color: #19b596;
@@ -296,9 +321,6 @@ footer .container ul li a {
   font-size: 16px;
   line-height: 28px;
   color: #898989;
-}
-.mobile-features figure figcaption .arrow-green {
-  margin-top: 28px;
 }
 
 aside {
@@ -503,64 +525,6 @@ body.homepage .greeting .button-suggest li a {
   text-decoration: none;
   color: #ffffff;
 }
-body.homepage .greeting .arrow-white {
-  position: relative;
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  border: 2px solid #ffffff;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 400ms;
-  -o-transition-duration: 400ms;
-  -webkit-transition-duration: 400ms;
-  transition-duration: 400ms;
-}
-body.homepage .greeting .arrow-white:hover {
-  background-color: rgba(20, 29, 37, 0.5);
-}
-body.homepage .greeting .arrow-white::before {
-  position: absolute;
-  top: 21px;
-  left: 11px;
-  display: block;
-  width: 12px;
-  height: 3px;
-  background-color: #ffffff;
-  content: "";
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -moz-border-radius: 50px 0 0 50px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px 0 0 50px;
-}
-body.homepage .greeting .arrow-white::after {
-  position: absolute;
-  top: 21px;
-  right: 11px;
-  display: block;
-  width: 12px;
-  height: 3px;
-  background-color: #ffffff;
-  content: "";
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -moz-border-radius: 0 50px 50px 0px;
-  -webkit-border-radius: 0;
-  border-radius: 0 50px 50px 0px;
-}
 body.homepage .lorem-dolor {
   padding-top: 142px;
 }
@@ -711,9 +675,6 @@ body.homepage .ut-sagittis .features figure figcaption p {
   line-height: 25px;
   text-align: center;
   color: #777777;
-}
-body.homepage .ut-sagittis .arrow-green {
-  margin-top: 29px;
 }
 body.homepage .sign-up {
   position: relative;

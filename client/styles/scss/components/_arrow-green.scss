@@ -1,40 +1,67 @@
-.arrow-green {
+.arrow {
 	position:relative;
-	display: inline-block;
-	width: 29px;
-	height: 29px;
-	border: 2px solid #34ac95;
+	display: inline-block;	
 	@include border-radius (50%);
 	@include box-sizing (border-box);
 	@include transition-property (all);
 	@include transition-duration (200ms);
-	&:hover {
-		border:2px solid #A4A4A6;
-		background-color: #E4E8EA;
-		&::before {
-			background-color: #596162;
-		}
-		&::after {
-			background-color: #596162;
-		}
-	}
 	&::before, &::after {
 		position:absolute;
-		top: 13px;
-		display: block;
-		width: 7px;
-		height: 2px;
-		background-color: #34ac95;
 		content: "";
-	}
-	&:before {		
-		left: 7px;		
+	}	
+	&::before {				
 		@include transform (rotate(45deg));
 		@include border-radius (50px 0 0 50px);
 	}
 	&::after {
-		right: 7px;
 		@include transform (rotate(-45deg));
 		@include border-radius (0 50px 50px 0px);
-	} 
-}
+	} 	
+	&.green {
+		width: 29px;
+		height: 29px;
+		margin-top: 28px;
+		border: 2px solid #34ac95;
+		&::before, &::after {
+			top: 13px;
+			display: block;
+			width: 7px;
+			height: 2px;
+			background-color: #34ac95;
+		}
+		&::before {
+			left: 7px;
+		}
+		&::after {
+			right: 7px;
+		}
+		&:hover {
+			border:2px solid #A4A4A6;
+			background-color: #E4E8EA;
+			&::before, &::after {
+				background-color: #596162;
+			}
+		}
+	}	
+	&.white {
+		width: 45px;
+		height: 45px;
+		border: 2px solid #ffffff;
+		&::before, &::after {
+			top: 21px;
+			display: block;
+			width: 12px;
+			height: 3px;
+			background-color: #ffffff;
+		}	
+		&::before {			
+			left: 11px;			
+		}
+		&::after {
+			right: 11px;			
+		} 
+		&:hover {
+			background-color: rgba(#141d25,0.5);   
+		}
+	}
+}	

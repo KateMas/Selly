@@ -87,43 +87,5 @@
 				color: #ffffff;
 			}	
 		}
-	}
-	.arrow-white {
-		position:relative;
-		display: inline-block;
-		width: 45px;
-		height: 45px;
-		border: 2px solid #ffffff;
-		@include border-radius (50%);
-		@include box-sizing (border-box);
-		@include transition-property (all);
-		@include transition-duration (400ms);
-		&:hover {
-			background-color: rgba(#141d25,0.5);   
-		}
-		&::before {
-			position:absolute;
-			top: 21px;
-			left: 11px;
-			display: block;
-			width: 12px;
-			height: 3px;
-			background-color: #ffffff;
-			content: "";
-			@include transform (rotate(45deg));
-			@include border-radius (50px 0 0 50px);
-		}
-		&::after {
-			position:absolute;
-			top: 21px;
-			right: 11px;
-			display: block;
-			width: 12px;
-			height: 3px;
-			background-color: #ffffff;
-			content: "";
-			@include transform (rotate(-45deg));
-			@include border-radius (0 50px 50px 0px);
-		} 
-	}
+	}	
 }
