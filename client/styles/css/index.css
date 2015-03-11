@@ -271,6 +271,7 @@ footer .container ul {
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   line-height: 100px;
+  text-align: left;
 }
 footer .container ul li {
   display: inline-block;
@@ -353,7 +354,8 @@ aside img {
   cursor: default;
 }
 aside .menu-sidebar {
-  margin-top: 64px;
+  margin-top: 30px;
+  margin-bottom: 53px;
 }
 aside .menu-sidebar ul {
   font-family: "Open-Sans", sans-serif;
@@ -361,12 +363,16 @@ aside .menu-sidebar ul {
   font-size: 12px;
   text-transform: uppercase;
 }
+aside .menu-sidebar ul li {
+  display: block;
+  line-height: 62px;
+}
 aside .menu-sidebar ul li::after {
   display: block;
   width: 30px;
   height: 1px;
+  margin: auto;
   background-color: #a4a6a8;
-  margin: 25px auto 27px;
   content: "";
 }
 aside .menu-sidebar ul li:last-child::after {
@@ -387,7 +393,6 @@ aside .mail {
   display: inline-block;
   width: 56px;
   height: 56px;
-  margin: 83px auto 0px;
   background-color: #3a3a3a;
   background-image: url("../../../client/images/sidebar/mail.png");
   background-repeat: no-repeat;
@@ -915,7 +920,6 @@ body.homepage .push {
   width: 0;
   height: 100%;
   min-height: 1px;
-  background-color: red;
   -moz-transition-property: width;
   -o-transition-property: width;
   -webkit-transition-property: width;

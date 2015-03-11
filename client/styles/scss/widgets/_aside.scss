@@ -16,19 +16,22 @@ aside {
         @include user-select (none);
     }
     .menu-sidebar {
-        margin-top: 64px;
+        margin-top: 30px;
+        margin-bottom: 53px;
         ul { 
             font-family: "Open-Sans", sans-serif;
             font-weight: normal;
             font-size: 12px;
             text-transform: uppercase;
             li {
+                display: block;
+                line-height: 62px;
                 &::after {
                     display: block;
                     width: 30px;
                     height: 1px;
+                    margin: auto;
                     background-color: #a4a6a8;
-                    margin:25px auto 27px;
                     content: "";
                 } 
                 &:last-child {
@@ -54,7 +57,6 @@ aside {
         display: inline-block;
         width: 56px;
         height: 56px;
-        margin:83px auto 0px;
         background-color:#3a3a3a;
         background-image: url("../../../client/images/sidebar/mail.png");
         background-repeat:no-repeat;
